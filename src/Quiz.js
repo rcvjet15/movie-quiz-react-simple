@@ -3,7 +3,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import {Button, ListGroup, ListGroupItem, Panel} from 'react-bootstrap'
+import {Button, ListGroup, ListGroupItem, Panel, Row, Col, Image} from 'react-bootstrap'
 import _ from 'lodash'
 
 const Movies = (props) => {		
@@ -138,22 +138,22 @@ class Quiz extends React.Component {
 		return (
 			<div style={{padding: '20px'}}>
 				<Panel bsStyle="info" header="Choose an answer" footer={<PanelFooter handleContinueClick={this.handleContinueClick} isCorrect={isCorrect} />} >
-					<div className={"row text-center " + (isCorrect === null ? 'hidden' : '')}>
+					<Row className={"text-center " + (isCorrect === null ? 'hidden' : '')}>
 						<h1 className={isCorrect ? 'text-success' : 'text-danger'}>{responseMessage}</h1>
-					</div>
-					<div className="row">
-						<div className="col-lg-4">
-							<img className="img-responsive img-rounded img-thumbnail" 
+					</Row>
+					<Row>
+						<Col xs={12} sm={4} md={4} lg={4} className="text-center">
+							<Image responsive="true" thumbnail="true"
 								src={movies[currentMovieIdx].imageUrl} />
-						</div>
-						<div className="col-lg-5">												
+						</Col>
+						<Col xs={12} sm={5} md={5} lg={5}>
 							<Movies movies = {movies}
 								handleMovieSelected = {this.handleMovieSelected}
 								currentMovie={this.state}
 								clickedIdx={clickedIdx}
 								isCorrect={isCorrect} />														
-						</div>
-					</div>
+						</Col>
+					</Row>
 				</Panel>
 			</div>
 		);

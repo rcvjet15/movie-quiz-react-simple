@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './css/App.css';
-import './css/font-awesome.min.css';
 import {Button, Panel, Tabs, Tab, Grid, Row, Col, PanelGroup, ListGroup, ListGroupItem, Image, Media} from 'react-bootstrap'
 import Quiz from './Quiz.js'
 import MovieForm from './MovieForm.js'
@@ -40,10 +39,10 @@ const ListOfMovies = (props) => {
 					<Media.Body>
 						<Media.Heading>
 							<Row>
-								<Col lg={9}>
+								<Col xs={9} sm={9} md={9} lg={9}>
 									{movie.name}
 								</Col>
-								<Col lg={2}>									
+								<Col xs={2} sm={2} md={2} lg={2}>									
 									<span className="clickable close-icon" style={{fontSize: '0.8em'}} onClick={props.handleDeleteMovie}>
 										<i className="fa fa-times"></i>
 									</span>
@@ -222,7 +221,7 @@ export default class App extends Component {
 								<Quiz movies={movies} />						
 							</Tab>
 							<Tab eventKey={1} title={App.tabTitles[1]}>
-								<Col xsHidden sm={4} md={4} lg={4}>
+								<Col xs={12} sm={6} md={6} lg={5}>
 									<Panel header={panelHeader}>
 										<ListOfMovies movies={movies} 
 											selectedMovie={selectedMovie} 
@@ -230,7 +229,7 @@ export default class App extends Component {
 											handleDeleteMovie={this.handleDeleteMovie}/>
 									</Panel>
 								</Col>
-								<Col xs={12} sm={8} md={8} lg={8}>									
+								<Col xs={12} sm={6} md={6} lg={7}>									
 									<MovieForm 
 										movies={movies} 
 										selectedMovie={selectedMovie} 
