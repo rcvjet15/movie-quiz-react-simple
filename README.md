@@ -1,4 +1,4 @@
-movie-quiz-react-simple
+# movie-quiz-react-simple
 Simple serverless react app that has two functionalities:
   1. Guessing movie by randomly selected image.
   2. Adding, updating and deleting movies for guessing quiz.
