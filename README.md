@@ -5,4 +5,4 @@ Simple serverless react app that has two functionalities:
 
 Idea for this app is from tutorial [React- Author Quiz](https://codepen.io/3point14/pen/KwEJwy/).
 
-For easier startup, [create-react-app](https://github.com/facebookincubator/create-react-app) is used.
+For easier startup, [create-react-app](https://github.com/facebookincubator/create-react-app) was used.
